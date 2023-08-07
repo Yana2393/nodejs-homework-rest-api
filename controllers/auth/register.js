@@ -5,7 +5,6 @@ const { User } = require("../../models/user");
 const { RequestError } = require("../../helpers");
 
 const register = async (req, res) => {
-    console.log("req", req)
     const {name, email, password} = req.body;
     const user = await User.findOne({email});
     if(user) {

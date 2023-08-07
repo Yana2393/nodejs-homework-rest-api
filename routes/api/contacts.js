@@ -10,14 +10,13 @@ const { ctrlWrapper } = require("../../helpers");
 
 const router = express.Router();
 
-router.get("/", authenticate, ctrlWrapper(ctrl.getAll));
+router.get("/",authenticate, ctrlWrapper(ctrl.getAll));
 
-router.get("/:contactId", authenticate, ctrlWrapper(ctrl.getById));
-console.log('ctrl.add', authenticate, ctrl.add);
+router.get("/:contactId",authenticate, ctrlWrapper(ctrl.getById));
 
-router.post("/", authenticate, validateBody(schemas.addSchema), ctrlWrapper(ctrl.add));
+router.post("/",authenticate, validateBody(schemas.addSchema), ctrlWrapper(ctrl.add));
 
-router.delete("/:contactId", authenticate, ctrlWrapper(ctrl.removeById));
+router.delete("/:contactId",authenticate, ctrlWrapper(ctrl.removeById));
 
 router.put(
   "/:contactId",
