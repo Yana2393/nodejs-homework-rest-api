@@ -1,7 +1,6 @@
 const Joi = require("joi");
 const { Schema, model } = require("mongoose");
 
-// const { handleMongooseError } = require("../helpers");
 
 const userSchema = new Schema({
   password: {
@@ -21,7 +20,6 @@ const userSchema = new Schema({
   avatarURL: String,
   token: String,
 });
-// userSchema.post("save", handleMongooseError);
 
 
 const User = model("user", userSchema);
