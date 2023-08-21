@@ -2,7 +2,7 @@ const express = require("express");
 
 const {validateBody, authenticate, upload} = require("../../middlewares");
 
-const { ctrlWrapper } = require("../../");
+const { ctrlWrapper } = require("../../helpers");
 
 const schemas = require("../../schemas/auth.js");
 
